@@ -1,0 +1,122 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body & Layout */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main styling */
+main {
+    margin-top: 80px; /* space for fixed header */
+}
+
+/* Section styling */
+section {
+    padding: 5rem 2rem;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+/* Parallax sections */
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* History section background */
+.history {
+    background-image: url('paris-history.jpg');
+}
+
+/* Tourist section background */
+.tourist {
+    background-image: url('paris-tourist.jpg');
+}
+
+/* Linear gradient section */
+.gradient-linear {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* orange gradient */
+    color: #222;
+}
+
+/* Radial gradient overlay inside tourist section */
+.gradient-radial {
+    background: radial-gradient(circle, rgba(0,0,0,0.6), rgba(0,0,0,0.2));
+    padding: 3rem;
+    border-radius: 10px;
+}
+
+/* Content styling inside sections */
+section .content {
+    max-width: 800px;
+    margin: 0 auto;
+    border: 2px solid rgba(255,255,255,0.3);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+/* Headings with different font sizes and weights */
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+/* Footer styling */
+footer {
+    background-color: #34495e;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 1.5rem 0;
+}
