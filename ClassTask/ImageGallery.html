@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery - Task 3</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    figure {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    figure img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    figure::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0);
+      transition: background 0.3s ease-in-out;
+      z-index: 1;
+    }
+
+    figure:hover img {
+      transform: scale(1.1);
+    }
+
+    figure:hover::before {
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    figcaption {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-size: 18px;
+      z-index: 2;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    figure:hover figcaption {
+      opacity: 1;
+    }
+
+    /* Responsive for small screens */
+    @media (max-width: 700px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="gallery">
+    <figure>
+      <img src="https://picsum.photos/400/300?random=7" alt="Nature 1">
+      <figcaption>Nature 1</figcaption>
+    </figure>
+    <figure>
+      <img src="https://picsum.photos/400/300?random=2" alt="Nature 2">
+      <figcaption>Nature 2</figcaption>
+    </figure>
+    <figure>
+      <img src="https://picsum.photos/400/300?random=3" alt="Nature 3">
+      <figcaption>Nature 3</figcaption>
+    </figure>
+    <figure>
+      <img src="https://picsum.photos/400/300?random=4" alt="Nature 4">
+      <figcaption>Nature 4</figcaption>
+    </figure>
+    <figure>
+      <img src="https://picsum.photos/400/300?random=5" alt="Nature 5">
+      <figcaption>Nature 5</figcaption>
+    </figure>
+    <figure>
+      <img src="https://picsum.photos/400/300?random=6" alt="Nature 6">
+      <figcaption>Nature 6</figcaption>
+    </figure>
+  </div>
+
+</body>
+</html>
