@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #aac9f8;
+  color: #333;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #0077ff;
+  color: rgb(161, 238, 89);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+.dashboard {
+  display: flex;
+  margin-top: 60px;
+  flex: 1;
+  min-height: calc(100vh - 60px);
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #1e293b;
+  color: rgb(6, 6, 6);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: calc(100vh - 60px);
+  position: fixed;
+  top: 60px;
+  left: 0;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  border-bottom: 2px solid #334155;
+  padding-bottom: 10px;
+}
+
+.sidebar a {
+  color: #6284ac;
+  text-decoration: none;
+  margin: 10px 0;
+  padding: 8px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+  background-color: #334155;
+  color: #773636;
+}
+
+.main-content {
+  margin-left: 220px;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+  flex: 1;
+}
+
+.content-box {
+  background-color: rgb(255, 255, 255);
+  flex: 1 1 45%;
+  min-width: 280px;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.content-box:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 800px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 0;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .content-box {
+    flex: 1 1 100%;
+  }
+}

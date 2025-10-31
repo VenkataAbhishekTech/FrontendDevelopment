@@ -1,0 +1,126 @@
+/* ===== Global Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f7fb;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===== Header ===== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #32aed0;
+  color: rgb(9, 9, 9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.6rem;
+}
+
+nav a {
+  color: rgb(83, 172, 236);
+  margin: 0 1em;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffeb3b;
+}
+
+/* ===== Main Section ===== */
+main {
+  flex: 1;
+  padding-top: 80px; /* To offset fixed header */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.bio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 3em 2em;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 80%;
+}
+
+.bio .text {
+  flex: 1 1 300px;
+}
+
+.bio .text h2 {
+  font-size: 2rem;
+  color: #1e88e5;
+  margin-bottom: 1em;
+}
+
+.bio .text p {
+  font-size: 1.1rem;
+  line-height: 1.6em;
+  color: #444;
+}
+
+.bio .image {
+  flex: 1 1 250px;
+  text-align: center;
+}
+
+.bio img {
+  width: 250px;
+  height: auto;
+  border-radius: 50%;
+  border: 4px solid #1e88e5;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #1e88e5;
+  color: rgb(180, 221, 33);
+  text-align: center;
+  padding: 1em 0;
+  font-size: 0.9rem;
+  position: relative;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 700px) {
+  .bio {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bio img {
+    width: 200px;
+  }
+
+  nav a {
+    margin: 0 0.5em;
+    font-size: 0.9rem;
+  }
+}

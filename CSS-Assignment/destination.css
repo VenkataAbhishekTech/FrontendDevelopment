@@ -1,0 +1,123 @@
+/* General Page Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #fafafa;
+}
+
+/* Header Section */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #222;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 10;
+}
+
+header h1 {
+  font-size: 1.8rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #f5c518;
+}
+
+/* Section Styling */
+main {
+  margin-top: 80px; /* Offset for fixed header */
+}
+
+.section {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* Section 1: About (solid background) */
+.about {
+  background-color: #f8e8e8;
+  border-bottom: 3px solid #e0b1b1;
+}
+
+/* Section 2: Attractions (Linear Gradient) */
+.attractions {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: #222;
+}
+
+/* Section 3: Culture (Radial Gradient + Fixed Background) */
+.culture {
+  background: radial-gradient(circle, rgba(255,255,255,0.8), rgba(255,200,200,0.5)),
+              url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1000&q=80');
+  background-size: cover;
+  background-attachment: fixed;
+  color: #111;
+}
+
+/* Section 4: Visit Info (Parallax Effect) */
+.visit {
+  background: url('https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=1000&q=80') no-repeat center center/cover;
+  background-attachment: fixed;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+/* Headings and Paragraphs */
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .section {
+    padding: 60px 15px;
+  }
+}

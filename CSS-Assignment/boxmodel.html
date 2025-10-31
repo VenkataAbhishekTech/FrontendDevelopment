@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Box Model & Positioning Master Layout</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>FlexDesign</h1>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="hero">
+    <div class="hero-text">
+      <h2>Welcome to FlexDesign Studio</h2>
+      <p>Mastering CSS Box Model, Flexbox, and Positioning with Clean Design</p>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-text">
+      <h3>About Us</h3>
+      <p>We are passionate about creating visually stunning, responsive web layouts using modern CSS techniques like flexbox, grid, and the box model.</p>
+      <p>Our goal is to help designers understand how spacing, borders, padding, and positioning can build balanced layouts that look great on any device.</p>
+    </div>
+    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7" alt="Team Working">
+  </section>
+
+  <section class="services" id="services">
+    <h3>Our Services</h3>
+    <div class="service-boxes">
+      <div class="service">
+        <h4>UI Design</h4>
+        <p>Modern, minimalist user interfaces built with attention to spacing, color, and clarity.</p>
+      </div>
+      <div class="service">
+        <h4>Web Development</h4>
+        <p>Fully responsive and accessible websites that adapt beautifully to any device.</p>
+      </div>
+      <div class="service">
+        <h4>Branding</h4>
+        <p>Consistent brand experiences with unique visuals, typography, and layout identity.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h3>Contact Us</h3>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 FlexDesign Studio. All rights reserved.
+  </footer>
+</body>
+</html>
