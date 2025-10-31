@@ -1,0 +1,43 @@
+/* ===== General Page Setup ===== */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;  /* Centers horizontally */
+  align-items: center;      /* Centers vertically */
+  background-color: #282828;
+}
+
+/* ===== Loader Container ===== */
+.loader {
+  display: flex;
+  gap: 15px; /* space between circles */
+}
+
+/* ===== Circles Styling ===== */
+.circle {
+  width: 20px;
+  height: 20px;
+  background-color: #08f793;
+  border-radius: 50%;
+  animation: bounce 0.6s ease-in-out infinite;
+}
+
+/* ===== Animation Keyframes ===== */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* ===== Animation Delay for Each Circle ===== */
+.circle:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.circle:nth-child(3) {
+  animation-delay: 0.4s;
+}

@@ -1,0 +1,77 @@
+/* ===== General Page Styling ===== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f8f9fc;
+}
+
+/* ===== Header & Navigation ===== */
+header {
+  background-color: #0077ff;
+  color: white;
+  padding: 20px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around; /* Evenly spaced links */
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #df0404;
+}
+
+/* ===== Main Section ===== */
+.main-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 40px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.box {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+  transform: rotate(2deg);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #0077ff;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+  margin-top: auto; /* keeps footer at bottom */
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 800px) {
+  .main-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

@@ -1,0 +1,126 @@
+/* ===== General Styling ===== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f5f7fb;
+  color: #333;
+}
+
+/* ===== Section Container ===== */
+.pricing-container {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #0077ff;
+  margin-bottom: 40px;
+}
+
+/* ===== Flexbox Layout ===== */
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+  flex-wrap: wrap;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* ===== Individual Card ===== */
+.card {
+  background: rgb(184, 229, 94);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Middle Card Highlight ===== */
+.premium {
+  background: #0077ff;
+  color: white;
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+/* ===== Pricing and Buttons ===== */
+.price {
+  font-size: 2rem;
+  margin: 15px 0;
+  font-weight: bold;
+}
+
+.price span {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+li {
+  margin: 10px 0;
+}
+
+button {
+  background: #05a4fa;
+  color: rgb(236, 113, 113);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #005fcc;
+}
+
+/* Premium Button */
+.premium button {
+  background: white;
+  color: #0077ff;
+  font-weight: bold;
+}
+
+.premium button:hover {
+  background: #e5e9ff;
+}
+
+/* ===== Animation ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 750px) {
+  .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .premium {
+    transform: none;
+  }
+}
