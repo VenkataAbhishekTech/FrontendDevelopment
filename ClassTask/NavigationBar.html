@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigation Bar Comparison (Flexbox, Float, Inline-Block)</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* ---------- Flexbox Navbar ---------- */
+.navbar-flex ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #007bff;
+  display: flex;
+  justify-content: center;
+}
+.navbar-flex li a {
+  display: block;
+  color: white;
+  padding: 15px 20px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+.navbar-flex li a:hover {
+  background-color: #0056b3;
+}
+
+/* ---------- Float Navbar ---------- */
+.navbar-float ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+.navbar-float ul li {
+  float: left;
+}
+.navbar-float ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navbar-float ul li a:hover {
+  background-color: #111111;
+}
+/* Clear float */
+.navbar-float::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ---------- Inline-Block Navbar ---------- */
+.navbar-inline {
+  background-color: #333;
+  padding: 10px 0;
+  text-align: center;
+}
+.navbar-inline a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+}
+.navbar-inline a:hover {
+  background-color: #2686df;
+  border-radius: 5px;
+}
+
+/* ---------- Section Titles ---------- */
+h2 {
+  margin: 20px;
+  color: #333;
+  text-align: center;
+}
+hr {
+  margin: 30px 0;
+  border: 1px solid #ccc;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Flexbox Navbar -->
+<h2>Navigation Bar using Flexbox</h2>
+<nav class="navbar-flex">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Products</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<hr>
+
+<!-- Float Navbar -->
+<h2>Navigation Bar using Float</h2>
+<nav class="navbar-float">
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+</nav>
+
+<hr>
+
+<!-- Inline-Block Navbar -->
+<h2>Navigation Bar using Inline-Block</h2>
+<nav class="navbar-inline">
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Portfolio</a>
+  <a href="#">Contact</a>
+</nav>
+
+</body>
+</html>
+
+<!--Using Flexbox-->
+<!---<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nav Bar - Flexbox</title>
+<style>
+.navbar-flex ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+background-color: #007bff;
+display: flex;
+}
+.navbar-flex li a {
+display: block;
+color: white;
+padding: 15px 20px;
+text-decoration: none;
+text-align: center;
+transition: background-color 0.3s;
+}
+.navbar-flex li a:hover {
+background-color: #0056b3;
+}
+</style>
+</head>
+
+<body>
+<nav class="navbar-flex">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Products</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</nav>
+</body>
+</html>-->
+<!--Using Float
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+margin: 0;
+padding: 0;
+}
+h2,p {
+margin: 10px;
+}
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #333333;
+}
+ul li {
+float: left;
+}
+ul li a {
+display: block;
+color: white;
+
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+ul li a:hover {
+background-color: #111111;
+}
+</style>
+</head>
+<body>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#news">News</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#about">About</a></li>
+</ul>
+<h2>Horizontal Navbar Using Float</h2>
+</body>
+</html>-->
+<!--Inline Block
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inline-Block Navigation Bar</title>
+<style>
+nav {
+background-color: #333;
+padding: 10px 0;
+}
+nav a {
+display: inline-block;
+color: white;
+text-decoration: none;
+padding: 12px 20px;
+}
+
+nav a:hover {
+background-color: #2686df;
+border-radius: 5px;
+}
+</style>
+</head>
+<body>
+<nav>
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Services</a>
+<a href="#">Portfolio</a>
+<a href="#">Contact</a>
+</nav>
+</body>
+</html>-->

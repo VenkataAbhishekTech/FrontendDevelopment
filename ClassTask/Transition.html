@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Transition Effects Comparison</title>
+<style>
+body {
+  background-color: #151313;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 40px 0;
+}
+
+/* ---------- Card Lift Transition ---------- */
+h2 {
+  color: #48d648;
+  margin-top: 40px;
+}
+.card-lift {
+  width: 250px;
+  height: 160px;
+  background-color: #d6c420;
+  color: white;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin: 40px auto;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.card-lift:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------- Advanced Transition (Scale + Rotate + Color) ---------- */
+.card-advanced {
+  width: 200px;
+  height: 200px;
+  background-color: #b6d720;
+  margin: 40px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition:
+    background-color 0.8s ease,
+    transform 0.6s ease-in-out,
+    box-shadow 0.8s ease,
+    border-radius 0.6s;
+}
+.card-advanced:hover {
+  background-color: #a6200c;
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+}
+
+/* ---------- Divider ---------- */
+hr {
+  margin: 60px 0;
+  border: 1px solid #ccc;
+}
+</style>
+</head>
+<body>
+
+<!-- Card Lift Transition -->
+<h2>1️⃣ Card Lift Transition</h2>
+<p>Hover to see the card lift up with a shadow effect.</p>
+<div class="card-lift">Hover Me</div>
+
+<hr>
+
+<!-- Advanced CSS Transition -->
+<h2>2️⃣ CSS Transition Demonstration</h2>
+<p>Hover over the box to see color, rotation, and shape transitions.</p>
+<div class="card-advanced">Hover Me</div>
+
+</body>
+</html>
+
+<!---<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<title>Card Lift Transition</title>
+<style>
+.card {
+width: 250px;
+height: 160px;
+background-color: #4a90e2;
+color: white;
+font-size: 18px;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 10px;
+margin: 40px auto;
+transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.card:hover {
+transform: translateY(-10px);
+box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+</style>
+</head>
+<body>
+<h2>Card Lift Transition</h2>
+<div class="card">Hover Me</div>
+</body>
+</html>-->
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Transition Example</title>
+<style>
+body {
+
+background-color: #f4f4f4;
+font-family: Arial, sans-serif;
+text-align: center;
+margin-top: 80px;
+}
+.card {
+width: 200px;
+height: 200px;
+background-color: #4a90e2;
+margin: auto;
+border-radius: 10px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 18px;
+transition:
+background-color 0.8s ease,
+transform 0.6s ease-in-out,
+box-shadow 0.8s ease,
+border-radius 0.6s;
+}
+.card:hover {
+background-color: #50e3c2;
+transform: scale(1.1) rotate(5deg);
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+border-radius: 50%;
+}
+</style>
+</head>
+<body>
+<h2>CSS Transition Demonstration</h2>
+<p>Hover over the box to see smooth transitions.</p>
+<div class="card">Hover Me</div>
+</body>
+</html>-->
