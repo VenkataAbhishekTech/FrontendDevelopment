@@ -1,0 +1,79 @@
+/* ====== Basic Page Styles ====== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7f7f9;
+  padding: 40px;
+  line-height: 1.6;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* ====== Attribute Selectors ====== */
+/* Select input with type="text" */
+input[type="text"] {
+  border: 2px solid #4a90e2;
+  padding: 8px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+/* Select all links that start with https */
+a[href^="https"] {
+  color: green;
+  text-decoration: none;
+}
+
+/* ====== Pseudo-classes ====== */
+a:hover {
+  text-decoration: underline;
+  color: darkgreen;
+}
+
+/* Highlight input on focus */
+input:focus {
+  border-color: orange;
+  outline: none;
+}
+
+/* Style every even list item */
+.items li:nth-child(even) {
+  background-color: #e0f7fa;
+}
+
+/* ====== Pseudo-elements ====== */
+/* Add decorative content before and after headings */
+h2::before {
+  content: "★ ";
+  color: gold;
+}
+h2::after {
+  content: " ★";
+  color: gold;
+}
+
+/* ====== Combinators ====== */
+/* Descendant selector: style all <li> inside .items */
+.items li {
+  padding: 8px;
+  border-radius: 5px;
+}
+
+/* Child selector: only direct <h2> inside section */
+section > h2 {
+  color: #0077cc;
+}
+
+/* Adjacent sibling selector: style <p> immediately after a section */
+section + p {
+  color: #d63384;
+  font-weight: bold;
+}
+
+/* General sibling selector: all <p> following any section */
+section ~ p {
+  font-style: italic;
+  color: #555;
+}
