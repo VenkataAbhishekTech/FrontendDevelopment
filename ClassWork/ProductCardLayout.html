@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Product Card Layout</title>
+<style>
+  /* ====== Global Styles ====== */
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 40px;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+  }
+
+  h1 {
+    margin-bottom: 40px;
+    color: #2c3e50;
+  }
+
+  /* ====== Grid Container ====== */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* ====== Individual Product Card ====== */
+  .card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .card h2 {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin: 15px 0 10px;
+  }
+
+  .card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+  }
+
+  .card button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .card button:hover {
+    background-color: #3e8e41;
+  }
+
+  /* ====== Responsive Breakpoints ====== */
+
+  /* Tablet - 2 columns */
+  @media (max-width: 1024px) {
+    .product-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Mobile - 1 column */
+  @media (max-width: 600px) {
+    .product-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <h1>Our Featured Products</h1>
+
+  <div class="product-grid">
+    <div class="card">
+      <img src="https://images.pexels.com/photos/2081199/pexels-photo-2081199.jpeg" alt="Product 1">
+      <h2>Product 1</h2>
+      <p>Crafted from premium leather, this timeless bag combines style and durability — perfect for work, travel, or daily essentials..</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="https://images.pexels.com/photos/1161528/pexels-photo-1161528.jpeg" alt="Product 2">
+      <h2>Product 2</h2>
+      <p>Stylish, durable, and perfect for everyday use..</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg" alt="Product 3">
+      <h2>Product 3</h2>
+      <p>Track your health, stay connected, and look sharp with this feature-packed smartwatch designed for modern lifestyles..</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg" alt="Product 4">
+      <h2>Product 4</h2>
+      <p>Experience crystal-clear sound and deep bass with premium noise-canceling technology and 20-hour battery life..</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+
+</body>
+</html>
