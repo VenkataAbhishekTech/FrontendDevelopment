@@ -1,0 +1,71 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background-color: #4a90e2;
+    color: white;
+    padding: 20px 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Gallery Grid */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+/* Image Container */
+figure {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+figure:hover {
+    transform: scale(1.03);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: filter 0.5s ease;
+}
+
+/* Different Filters */
+figure:nth-child(1) img { filter: blur(3px); }
+figure:nth-child(2) img { filter: grayscale(100%); }
+figure:nth-child(3) img { filter: sepia(100%); }
+figure:nth-child(4) img { filter: brightness(1.5); }
+figure:nth-child(5) img { filter: contrast(180%); }
+figure:nth-child(6) img { filter: hue-rotate(90deg); }
+
+/* Hover removes filter */
+figure:hover img {
+    filter: none;
+}
+
+/* Caption Style */
+figcaption {
+    padding: 10px;
+    background-color: #f8f8f8;
+    font-weight: bold;
+}
+
+/* Responsive - Stack in one column below 600px */
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}

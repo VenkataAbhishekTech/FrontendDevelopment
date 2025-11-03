@@ -1,0 +1,75 @@
+/* General Page Styling */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Section Styling */
+.comparison-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+h1 {
+    color: #4a90e2;
+    margin-bottom: 30px;
+}
+
+/* Image Container - Flex Layout */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Image Box Styling */
+.image-box {
+    flex: 1 1 400px;
+    text-align: center;
+    transition: transform 0.4s ease;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: filter 0.5s ease;
+}
+
+/* Filter for After Image */
+.filtered img {
+    filter: brightness(60%);
+}
+
+/* Hover Effects */
+.image-box:hover img {
+    filter: none;
+    transform: scale(1.02);
+}
+
+/* Captions */
+figcaption {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 700px) {
+    .image-container {
+        flex-direction: column;
+    }
+
+    .image-box {
+        width: 100%;
+    }
+
+    figcaption {
+        font-size: 0.95rem;
+    }
+}

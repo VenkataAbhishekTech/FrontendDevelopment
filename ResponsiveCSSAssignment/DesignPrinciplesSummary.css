@@ -1,0 +1,80 @@
+/* General Page Styling */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+/* Section Styling */
+.principles-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+h1 {
+    color: #4a90e2;
+    margin-bottom: 30px;
+}
+
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Box Styling */
+.box {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background 0.4s ease, color 0.4s ease, transform 0.4s ease;
+    text-align: left;
+}
+
+.box h2 {
+    color: #4a90e2;
+    margin-bottom: 10px;
+}
+
+.box pre {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 6px;
+    overflow-x: auto;
+}
+
+/* Hover Effects */
+.box:hover {
+    background: linear-gradient(135deg, #4a90e2, #5aff0d);
+    color: white;
+    transform: translateY(-5px);
+}
+
+.box:hover h2 {
+    color: #fff;
+}
+
+.box:hover pre {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive for small screens */
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .box {
+        text-align: center;
+    }
+
+    pre {
+        text-align: left;
+    }
+}
