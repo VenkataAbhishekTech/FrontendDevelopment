@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-Sizing Comparison</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Box-Sizing Comparison</h1>
+    <p class="description">
+        The <strong>box-sizing</strong> property controls how width and height are calculated.  
+        With <code>content-box</code> (default), padding and border add to the total size.  
+        With <code>border-box</code>, they are included inside the specified width and height.
+    </p>
+
+    <div class="box-container">
+        <div>
+            <div class="content-box">content-box</div>
+            <div class="label">Default: box-sizing: content-box;</div>
+        </div>
+
+        <div>
+            <div class="border-box">border-box</div>
+            <div class="label">box-sizing: border-box;</div>
+        </div>
+    </div>
+</body>
+</html>

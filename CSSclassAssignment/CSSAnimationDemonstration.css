@@ -1,0 +1,71 @@
+/* --- General Page Setup --- */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #a2c2e2, #f9f9f9);
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* --- Flexbox Layout --- */
+.animation-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* --- Animation 1: Moving Box --- */
+.moving-box {
+    width: 80px;
+    height: 80px;
+    background-color: #007bff;
+    border-radius: 10px;
+    animation: moveBox 3s ease-in-out infinite alternate;
+    animation-delay: 0.5s;
+    animation-direction: alternate;
+}
+
+@keyframes moveBox {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-120px); }
+}
+
+/* --- Animation 2: Bouncing Ball --- */
+.bouncing-ball {
+    width: 70px;
+    height: 70px;
+    background-color: #ff5722;
+    border-radius: 50%;
+    animation: bounce 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100px); }
+}
+
+/* --- Animation 3: Color-Changing Text --- */
+.color-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #222;
+    animation: colorChange 4s ease-in-out infinite alternate;
+}
+
+@keyframes colorChange {
+    0% { color: #e91e63; }
+    25% { color: #3f51b5; }
+    50% { color: #4caf50; }
+    75% { color: #ff9800; }
+    100% { color: #9c27b0; }
+}

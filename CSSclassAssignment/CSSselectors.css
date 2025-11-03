@@ -1,0 +1,101 @@
+/* ----------------------------
+   Basic Page Styling
+----------------------------- */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+header, footer {
+  background-color: #0077cc;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+main {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+/* ----------------------------
+   1️⃣ Element Selector
+   Targets all <p> elements
+----------------------------- */
+p {
+  color: #555;
+  line-height: 1.5;
+}
+
+/* ----------------------------
+   2️⃣ Class Selector (.highlight)
+   Used to highlight specific text
+----------------------------- */
+.highlight {
+  background-color: #fffa9e;
+  font-weight: bold;
+}
+
+/* ----------------------------
+   3️⃣ ID Selector (#special)
+   Targets one unique element
+----------------------------- */
+#special {
+  color: #0077cc;
+  font-size: 18px;
+  border-left: 4px solid #0077cc;
+  padding-left: 10px;
+}
+
+/* ----------------------------
+   4️⃣ Attribute Selector
+   Styles links with target="_blank"
+----------------------------- */
+a[target="_blank"] {
+  color: #e63946;
+  text-decoration: underline;
+}
+
+/* ----------------------------
+   5️⃣ Combinator Selectors
+----------------------------- */
+/* Descendant selector: targets <li> inside <ul> */
+ul li {
+  color: #333;
+  padding: 4px;
+}
+
+/* Child selector: targets direct <p> children of .container */
+.container > p {
+  color: #1d3557;
+  font-style: italic;
+}
+
+/* Adjacent sibling selector: targets <p> immediately after <h3> */
+h3 + p {
+  color: #0077cc;
+}
+
+/* General sibling selector: targets all <p> after <h2> in same parent */
+h2 ~ p {
+  color: #e76f51;
+}
+
+/* ----------------------------
+   Footer Styling
+----------------------------- */
+footer {
+  margin-top: 40px;
+  font-size: 14px;
+}

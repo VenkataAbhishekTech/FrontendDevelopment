@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Selectors Practice</title>
+  <link rel="stylesheet" href="selectors-practice.css">
+</head>
+<body>
+
+  <header>
+    <h1>CSS Selectors Practice Page</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>1. Element, Class, and ID Selectors</h2>
+      <p>This is a regular paragraph styled using the <strong>element selector</strong>.</p>
+      <p class="highlight">This paragraph uses the <strong>class selector (.highlight)</strong> to apply background color.</p>
+      <p id="special">This one is styled using an <strong>ID selector (#special)</strong>.</p>
+    </section>
+
+    <section>
+      <h2>2. Attribute Selector</h2>
+      <p>Here are two links:</p>
+      <a href="https://example.com" target="_blank">External Link (opens in new tab)</a><br>
+      <a href="page.html">Internal Link</a>
+    </section>
+
+    <section class="container">
+      <h2>3. Combinator Selectors</h2>
+      <p>This paragraph is a <strong>direct child</strong> of .container, styled using the <strong>child selector (>)</strong>.</p>
+      <ul>
+        <li>List item inside <code>&lt;ul&gt;</code> — styled by <strong>descendant selector</strong>.</li>
+        <li>Another list item example.</li>
+      </ul>
+
+      <h3>Heading h3 Example</h3>
+      <p>This paragraph comes right after h3 — styled with the <strong>adjacent sibling (+)</strong> selector.</p>
+
+      <h2>Another h2 Example</h2>
+      <p>All paragraphs after h2 are styled by the <strong>general sibling (~)</strong> selector.</p>
+      <p>See how multiple paragraphs share the same style.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Created by Abhishek • CSS Selectors Demonstration</p>
+  </footer>
+
+</body>
+</html>
