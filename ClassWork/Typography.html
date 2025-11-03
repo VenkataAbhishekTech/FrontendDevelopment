@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Typography</title>
+<style>
+  /* Page styling */
+  body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 50px;
+    background-color: #f9f9f9;
+    color: #393434;
+  }
+
+  /* Responsive heading using clamp() */
+  h1 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    color: #2f4e6e;
+    margin-bottom: 20px;
+  }
+
+  /* Responsive paragraph using clamp() */
+  p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: #555;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: auto;
+  }
+</style>
+</head>
+<body>
+  <h1>Responsive Typography Example</h1>
+  <p>
+    Resize the browser window to see how the text size changes smoothly across devices.
+    The font size adapts using the <code>clamp()</code> function to stay readable on any screen.
+  </p>
+</body>
+</html>
