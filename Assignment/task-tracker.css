@@ -1,0 +1,26 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.card {
+  background-color: #797676;
+}
+
+.list-group-item {
+  font-size: 1.1rem;
+  padding: 15px 20px;
+}
+
+.badge {
+  font-size: 0.9rem;
+  padding: 8px 12px;
+}
+
+button.btn {
+  font-size: 1.1rem;
+  border-radius: 10px;
+}
+
+footer {
+  font-size: 1rem;
+}

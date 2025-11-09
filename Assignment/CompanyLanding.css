@@ -1,0 +1,31 @@
+.hero {
+  background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d') center/cover no-repeat;
+  height: 90vh;
+}
+
+h1, h2, h3, p, a, .nav-link {
+  font-size: 1.1rem;
+}
+
+.display-4 {
+  font-size: 3rem;
+}
+
+.lead {
+  font-size: 1.25rem;
+}
+
+.btn-lg {
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 50px;
+}
+
+@media (max-width: 768px) {
+  .display-4 {
+    font-size: 2rem;
+  }
+  .lead {
+    font-size: 1rem;
+  }
+}
