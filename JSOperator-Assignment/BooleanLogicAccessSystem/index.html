@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>Boolean Logic Access System</title>
+</head>
+<body>
+  <div class="container">
+    <h2>Boolean Logic Access System</h2>
+
+    <label>Door Locked:</label>
+    <select id="door">
+      <option value="true">True</option>
+      <option value="false">False</option>
+    </select>
+
+    <label>Window Closed:</label>
+    <select id="window">
+      <option value="true">True</option>
+      <option value="false">False</option>
+    </select>
+
+    <label>Alarm On:</label>
+    <select id="alarm">
+      <option value="true">True</option>
+      <option value="false">False</option>
+    </select>
+
+    <label>Owner Inside:</label>
+    <select id="owner">
+      <option value="true">True</option>
+      <option value="false">False</option>
+    </select>
+
+    <button onclick="checkAccess()">Check Status</button>
+
+    <div id="output"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

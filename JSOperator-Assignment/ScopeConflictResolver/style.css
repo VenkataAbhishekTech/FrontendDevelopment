@@ -1,0 +1,31 @@
+body {
+    background: #f29494;
+    font-family: Arial, sans-serif;
+}
+
+.box {
+    width: 400px;
+    margin: 80px auto;
+    background: rgb(237, 229, 138);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0d0d0d;
+    text-align: center;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 10px;
+    border: none;
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+#output {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}

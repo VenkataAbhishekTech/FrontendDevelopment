@@ -1,0 +1,33 @@
+body {
+  background: #87cfe0;
+  font-family: Arial;
+}
+
+.box {
+  width: 380px;
+  background: rgb(93, 91, 91);
+  margin: 60px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #4CAF50;
+  color: rgb(98, 118, 129);
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #388E3C;
+}
+
+p {
+  margin-top: 15px;
+  font-size: 16px;
+}

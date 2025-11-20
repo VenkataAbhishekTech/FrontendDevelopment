@@ -1,0 +1,30 @@
+body {
+    background: #023439;
+    font-family: Arial;
+}
+
+.box {
+    width: 400px;
+    margin: 80px auto;
+    background: rgb(207, 199, 199);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #8df406;
+    text-align: center;
+}
+
+button {
+    padding: 10px 18px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#output {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
