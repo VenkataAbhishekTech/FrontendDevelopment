@@ -1,0 +1,35 @@
+body {
+  background: #99b5e0;
+  font-family: Arial;
+}
+
+.box {
+  width: 500px;
+  background: #a9a9a9;
+  margin: 70px auto;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  color: #a0a461;
+  border: none;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+#output {
+  margin-top: 20px;
+  font-size: 15px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}

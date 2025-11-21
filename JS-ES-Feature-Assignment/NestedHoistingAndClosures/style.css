@@ -1,0 +1,21 @@
+body {
+    font-family: Arial;
+    background: #f4f4f4;
+    padding: 20px;
+}
+h1 {
+    color: #222;
+}
+button {
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+pre {
+    margin-top: 20px;
+    background: white;
+    padding: 15px;
+    border: 1px solid #ccc;
+}
