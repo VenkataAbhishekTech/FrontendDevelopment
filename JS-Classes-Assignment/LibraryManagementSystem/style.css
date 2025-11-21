@@ -1,0 +1,42 @@
+body {
+    font-family: Arial;
+    background: #f4f4f4;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    width: 350px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px #aaa;
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+#bookList li {
+    padding: 5px 0;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#message {
+    margin-top: 10px;
+    font-weight: bold;
+}

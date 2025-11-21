@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Form Validator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Student Registration Form</h2>
+
+<form id="studentForm">
+    <div class="input-group">
+        <label>Name</label>
+        <input type="text" id="name">
+        <small class="error"></small>
+    </div>
+
+    <div class="input-group">
+        <label>Email</label>
+        <input type="text" id="email">
+        <small class="error"></small>
+    </div>
+
+    <div class="input-group">
+        <label>Phone</label>
+        <input type="text" id="phone">
+        <small class="error"></small>
+    </div>
+
+    <div class="input-group">
+        <label>Password</label>
+        <input type="password" id="password">
+        <small class="error"></small>
+    </div>
+
+    <button type="button" onclick="validateForm()">Submit</button>
+</form>
+
+<script src="script.js"></script>
+</body>
+</html>
