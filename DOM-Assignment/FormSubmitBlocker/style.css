@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 40px;
+}
+
+form {
+    width: 320px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.field {
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+    height: 14px;
+}
+
+#successMsg {
+    margin-top: 20px;
+    font-size: 18px;
+    color: green;
+    font-weight: bold;
+}

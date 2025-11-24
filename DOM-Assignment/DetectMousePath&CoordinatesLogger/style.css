@@ -1,0 +1,101 @@
+/* Layout */
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: #f5f7fb;
+  margin: 0;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 820px;
+}
+
+/* Title */
+h1 {
+  margin: 0 0 16px 0;
+  font-size: 20px;
+  color: #222;
+}
+
+/* The 400x400 tracking box */
+.tracking-box {
+  width: 400px;
+  height: 400px;
+  border: 2px dashed #9aa7b2;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+  border-radius: 6px;
+  position: relative; /* children (dots) are positioned relative to this */
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+/* Small red dot placed on double-click */
+.red-dot {
+  width: 10px;
+  height: 10px;
+  background: #e53935;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%); /* center the dot at click point */
+  box-shadow: 0 0 6px rgba(229,57,53,0.6);
+  pointer-events: none; /* dots don't block mouse events */
+}
+
+/* Info panel next to the box */
+.info-panel {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 12px;
+}
+
+/* Live coordinates panel */
+.live-coords {
+  min-width: 220px;
+  background: white;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #e1e8ee;
+  font-size: 14px;
+}
+
+/* Path log panel */
+.path-log {
+  flex: 1;
+  background: white;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #e1e8ee;
+  max-height: 150px;
+  overflow: auto;
+  font-size: 13px;
+}
+
+.path-log ol {
+  margin: 6px 0 0 18px;
+  padding: 0;
+}
+
+/* Buttons */
+.controls {
+  margin-bottom: 8px;
+}
+
+button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #cfd8dd;
+  background: #fff;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+button:hover { background: #f0f4f7; }
+
+/* Small hint text */
+.hint {
+  color: #5b6b73;
+  font-size: 13px;
+  margin-top: 8px;
+}
