@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #fafafa;
+    padding: 20px;
+}
+
+button {
+    padding: 12px 25px;
+    background: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background: #c9302c;
+}
+
+pre {
+    width: 80%;
+    margin: auto;
+    background: #222;
+    color: #0f0;
+    padding: 20px;
+    border-radius: 6px;
+    text-align: left;
+    min-height: 200px;
+}
