@@ -1,0 +1,51 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.subscription-panel {
+  max-width: 600px;
+  margin: auto;
+}
+
+.topics {
+  list-style: none;
+  padding: 0;
+}
+
+.topic {
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topic button {
+  margin-left: 5px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.topic button:hover {
+  background-color: #0056b3;
+}
+
+#new-topic {
+  padding: 5px;
+  width: 60%;
+  margin-right: 5px;
+}
+
+#message {
+  margin-top: 20px;
+  font-weight: bold;
+  color: green;
+}

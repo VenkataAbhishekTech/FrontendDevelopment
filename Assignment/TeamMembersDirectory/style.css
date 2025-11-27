@@ -1,0 +1,41 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.department {
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.dept-title {
+  cursor: pointer;
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.manager {
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.employee {
+  margin-left: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.contact {
+  display: none;
+  font-size: 0.9em;
+  color: #555;
+  margin-left: 10px;
+}
+
+.highlight {
+  background-color: #fffae6;
+}

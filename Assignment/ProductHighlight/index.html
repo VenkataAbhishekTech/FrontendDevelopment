@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product Highlight</title>
+  <script src ="style.css" defer></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js" defer></script>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .product-list { display: flex; gap: 15px; flex-wrap: wrap; }
+    .product { border:1px solid #ccc; padding:10px; width:200px; text-align:center; cursor:pointer; position:relative; }
+    .product img { width:100%; height:auto; }
+    .highlighted { background-color:#fffae6; }
+    .favorite.selected { color:red; }
+    .details { display:none; font-size:0.9em; margin-top:5px; }
+    .discounted { border:2px dashed green; }
+  </style>
+</head>
+<body>
+
+<h2>Featured Products</h2>
+<div class="product-list">
+  <div class="product" data-stock="available" data-discount="15%">
+    <a href="https://example.com/product1"><img src="https://picsum.photos/seed/p1/200/150" alt="Wireless Headphones"></a>
+    <h3>Wireless Headphones</h3>
+    <span class="favorite">★</span>
+    <div class="details">High‑quality sound, noise cancellation.</div>
+  </div>
+
+  <div class="product" data-stock="out" data-discount="">
+    <a href="https://example.com/product2"><img src="https://picsum.photos/seed/p2/200/150" alt="Smart Watch"></a>
+    <h3>Smart Watch</h3>
+    <span class="favorite">★</span>
+    <div class="details">Track fitness, notifications, and more.</div>
+  </div>
+
+  <div class="product" data-stock="available" data-discount="20%">
+    <a href="https://example.com/product3"><img src="https://picsum.photos/seed/p3/200/150" alt="Gaming Mouse"></a>
+    <h3>Gaming Mouse</h3>
+    <span class="favorite">★</span>
+    <div class="details">Ergonomic design with RGB lighting.</div>
+  </div>
+
+  <div class="product" data-stock="available" data-discount="">
+    <a href="https://example.com/product4"><img src="https://picsum.photos/seed/p4/200/150" alt="Bluetooth Speaker"></a>
+    <h3>Bluetooth Speaker</h3>
+    <span class="favorite">★</span>
+    <div class="details">Portable, waterproof, 12‑hour battery life.</div>
+  </div>
+
+  <div class="product" data-stock="out" data-discount="5%">
+    <a href="https://example.com/product5"><img src="https://picsum.photos/seed/p5/200/150" alt="Laptop Stand"></a>
+    <h3>Laptop Stand</h3>
+    <span class="favorite">★</span>
+    <div class="details">Adjustable height, lightweight aluminum.</div>
+  </div>
+</div>
+
+</body>
+</html>

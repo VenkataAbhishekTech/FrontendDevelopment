@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Members Directory</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<h2>Team Members Directory</h2>
+
+<div class="department" data-dept="Engineering">
+  <h3 class="dept-title">Engineering Department</h3>
+  <ul class="team">
+    <li class="manager">Alice Johnson
+      <ul class="employees">
+        <li class="employee">Bob Smith <span class="contact">bob@example.com</span></li>
+        <li class="employee">Charlie Davis <span class="contact">charlie@example.com</span></li>
+      </ul>
+    </li>
+    <li class="manager">Dana White
+      <ul class="employees">
+        <li class="employee">Eva Green <span class="contact">eva@example.com</span></li>
+        <li class="employee">Frank Hall <span class="contact">frank@example.com</span></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<div class="department" data-dept="Marketing">
+  <h3 class="dept-title">Marketing Department</h3>
+  <ul class="team">
+    <li class="manager">George King
+      <ul class="employees">
+        <li class="employee">Hannah Lee <span class="contact">hannah@example.com</span></li>
+        <li class="employee">Ian Moore <span class="contact">ian@example.com</span></li>
+      </ul>
+    </li>
+    <li class="manager">Jane Scott
+      <ul class="employees">
+        <li class="employee">Kevin Brown <span class="contact">kevin@example.com</span></li>
+        <li class="employee">Laura Adams <span class="contact">laura@example.com</span></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<button id="random-employee">Select Random Employee</button>
+<button id="toggle-team">Collapse/Expand Team</button>
+
+</body>
+</html>

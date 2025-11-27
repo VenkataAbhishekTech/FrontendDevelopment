@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Blog Posts</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<h2>Admin Blog Panel</h2>
+
+<div class="controls">
+  <input type="text" id="new-post" placeholder="Enter post title">
+  <button id="add-post">Add New Post</button>
+  <button id="prepend-post">Prepend Featured Post</button>
+  <button id="remove-last">Remove Last Post</button>
+  <input type="text" id="highlight-keyword" placeholder="Keyword to highlight">
+</div>
+
+<ul class="blog-list">
+  <li class="post">Introduction to JavaScript</li>
+  <li class="post">Understanding CSS Flexbox</li>
+  <li class="post">Getting Started with Python</li>
+</ul>
+
+</body>
+</html>
