@@ -1,0 +1,22 @@
+body {
+  font-family: Arial;
+  padding: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: auto;
+}
+
+input, button {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#message {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+}

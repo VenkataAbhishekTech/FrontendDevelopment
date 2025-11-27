@@ -1,0 +1,17 @@
+{
+  "users": [
+    { "id": 1, "name": "A" },
+    { "id": 2, "name": "B" },
+    { "id": 3, "name": "C" }
+  ],
+  "orders": [
+    { "id": 1, "amount": 300 },
+    { "id": 2, "amount": 500 }
+  ],
+  "products": [
+    { "id": 1, "name": "Phone" },
+    { "id": 2, "name": "Laptop" },
+    { "id": 3, "name": "Mouse" },
+    { "id": 4, "name": "Keyboard" }
+  ]
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Employee Status Dashboard</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f1f1f1;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    table {
+      width: 60%;
+      margin: auto;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+
+    .active {
+      color: green;
+      font-weight: bold;
+    }
+
+    .inactive {
+      color: red;
+      font-weight: bold;
+    }
+
+    .error {
+      color: red;
+      text-align: center;
+      margin-top: 10px;
+      font-size: 14px;
+      display: none;
+    }
+
+    .toggle-btn {
+      padding: 6px 15px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      color: white;
+    }
+
+    .btn-active {
+      background-color: green;
+    }
+
+    .btn-inactive {
+      background-color: red;
+    }
+  </style>
+
+</head>
+<body>
+
+  <h2>Employee Status Dashboard</h2>
+
+  <div class="error" id="errorBox">Error updating status. Try again!</div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Status</th>
+        <th>Toggle</th>
+      </tr>
+    </thead>
+    <tbody id="employeeTable"></tbody>
+  </table>
+
+  <script>
+    const API_URL = "http://localhost:3002/employees";
+    const tableBody = document.getElementById("employeeTable");
+    const errorBox = document.getElementById("errorBox");
+
+    // Load employees when page opens
+    function loadEmployees() {
+      const xhr = new XMLHttpRequest();
+      xhr.open("GET", API_URL);
+      xhr.onload = () => {
+        const employees = JSON.parse(xhr.responseText);
+        displayEmployees(employees);
+      };
+      xhr.send();
+    }
+
+    // Display in table
+    function displayEmployees(data) {
+      tableBody.innerHTML = "";
+
+      data.forEach(emp => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${emp.id}</td>
+          <td>${emp.name}</td>
+          <td class="status ${emp.status}">${emp.status}</td>
+          <td>
+            <button class="toggle-btn ${emp.status === 'active' ? 'btn-active' : 'btn-inactive'}"
+                    onclick="toggleStatus(${emp.id}, '${emp.status}', this)">
+              ${emp.status === "active" ? "Deactivate" : "Activate"}
+            </button>
+          </td>
+        `;
+        tableBody.appendChild(tr);
+      });
+    }
+
+    // Toggle status
+    function toggleStatus(id, currentStatus, btn) {
+      const newStatus = currentStatus === "active" ? "inactive" : "active";
+
+      // UI update immediately
+      const statusCell = btn.parentElement.previousElementSibling;
+      statusCell.textContent = newStatus;
+      statusCell.className = "status " + newStatus;
+
+      btn.textContent = newStatus === "active" ? "Deactivate" : "Activate";
+      btn.className = "toggle-btn " + (newStatus === "active" ? "btn-active" : "btn-inactive");
+
+      // PATCH request
+      const xhr = new XMLHttpRequest();
+      xhr.open("PATCH", `${API_URL}/${id}`);
+      xhr.setRequestHeader("Content-Type", "application/json");
+
+      xhr.onload = () => {
+        if (xhr.status >= 200 && xhr.status < 300) {
+          errorBox.style.display = "none"; // success
+        } else {
+          showError();
+          revertUI();
+        }
+      };
+
+      xhr.onerror = () => {
+        showError();
+        revertUI();
+      };
+
+      xhr.send(JSON.stringify({ status: newStatus }));
+
+      // revert UI if error
+      function revertUI() {
+        statusCell.textContent = currentStatus;
+        statusCell.className = "status " + currentStatus;
+
+        btn.textContent = currentStatus === "active" ? "Deactivate" : "Activate";
+        btn.className = "toggle-btn " + (currentStatus === "active" ? "btn-active" : "btn-inactive");
+      }
+    }
+
+    function showError() {
+      errorBox.style.display = "block";
+      setTimeout(() => (errorBox.style.display = "none"), 2500);
+    }
+
+    loadEmployees();
+  </script>
+
+</body>
+</html>
