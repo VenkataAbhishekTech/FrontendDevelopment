@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+</head>
+<body style="background:#f0f0f0; font-family:Arial; text-align:center; padding-top:40px;">
+
+    <h2 style="color:#333;">Simple Calculator</h2>
+
+    <div style="width:260px; background:white; padding:20px; margin:auto; 
+                border-radius:10px; box-shadow:0 0 10px rgb(61, 50, 50);">
+        
+        <input id="display" type="text" 
+               style="width:100%; height:40px; font-size:20px; text-align:right; 
+                      margin-bottom:10px; padding-right:10px; border:1px solid #ddd;"
+               disabled>
+
+        <br>
+
+        <button onclick="append('7')" style="width:55px; height:40px;">7</button>
+        <button onclick="append('8')" style="width:55px; height:40px;">8</button>
+        <button onclick="append('9')" style="width:55px; height:40px;">9</button>
+        <button onclick="append('/')" style="width:55px; height:40px;">/</button>
+
+        <br><br>
+
+        <button onclick="append('4')" style="width:55px; height:40px;">4</button>
+        <button onclick="append('5')" style="width:55px; height:40px;">5</button>
+        <button onclick="append('6')" style="width:55px; height:40px;">6</button>
+        <button onclick="append('*')" style="width:55px; height:40px;">*</button>
+
+        <br><br>
+
+        <button onclick="append('1')" style="width:55px; height:40px;">1</button>
+        <button onclick="append('2')" style="width:55px; height:40px;">2</button>
+        <button onclick="append('3')" style="width:55px; height:40px;">3</button>
+        <button onclick="append('-')" style="width:55px; height:40px;">-</button>
+
+        <br><br>
+
+        <button onclick="append('0')" style="width:55px; height:40px;">0</button>
+        <button onclick="append('.')" style="width:55px; height:40px;">.</button>
+        <button onclick="calculate()" style="width:55px; height:40px;">=</button>
+        <button onclick="append('+')" style="width:55px; height:40px;">+</button>
+
+        <br><br>
+
+        <button onclick="clearDisplay()" 
+                style="width:230px; height:40px; background:red; color:white;">
+            Clear
+        </button>
+    </div>
+
+    <script>
+        function append(num) {
+            document.getElementById("display").value += num;
+        }
+        function calculate() {
+            let exp = document.getElementById("display").value;
+            try {
+                document.getElementById("display").value = eval(exp);
+            } catch {
+                document.getElementById("display").value = "Error";
+            }
+        }
+        function clearDisplay() {
+            document.getElementById("display").value = "";
+        }
+    </script>
+
+</body>
+</html>
